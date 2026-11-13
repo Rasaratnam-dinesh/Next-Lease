@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>NextLease | Drive Your Dream</title>
+  <meta name="description" content="NextLease helps you compare vehicle lease offers from licensed lenders, free, with no fees and no obligation.">
+  <link rel="icon" href="images/logo-icon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Mobile top bar: full logo with slogan -->
+<header class="topbar">
+  <a href="#home" aria-label="NextLease home"><img src="images/logo.png" alt="NextLease, Drive Your Dream" height="44"></a>
+</header>
+
+<!-- Navigation: white floating bar at the top on desktop, bottom tab bar on mobile -->
+<nav class="nav" aria-label="Main navigation">
+  <a class="nav__logo" href="#home" aria-label="NextLease home"><img src="images/logo.png" alt="NextLease, Drive Your Dream" height="52"></a>
+  <ul class="nav__list">
+    <li><a href="#home" class="active"><svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg><span>Home</span></a></li>
+    <li><a href="#about"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg><span class="l-full">About us</span><span class="l-short">About</span></a></li>
+    <li><a href="#services"><svg viewBox="0 0 24 24"><path d="M5 16l1.5-5a2 2 0 0 1 1.9-1.4h7.2a2 2 0 0 1 1.9 1.4L19 16M3 16h18v3h-2.5v-1.5h-13V19H3zM8 13h8"/></svg><span class="l-full">Our services</span><span class="l-short">Services</span></a></li>
+    <li><a href="#team"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.5 3-6 6.5-6s6.5 2.5 6.5 6M16 4.8a3.5 3.5 0 0 1 0 6.4M18 14.3c2 .7 3.5 2.6 3.5 5.7"/></svg><span class="l-full">Our team</span><span class="l-short">Team</span></a></li>
+    <li class="nav__contact"><a href="#contact"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span class="l-full">Contact us</span><span class="l-short">Contact</span></a></li>
+  </ul>
+</nav>
+
+<main>
+  <!-- Home -->
+  <section id="home" class="hero">
+    <div class="hero__media" aria-hidden="true"></div>
+    <div class="container hero__content">
+      <p class="hero__tag">Free lease comparison, no fees and no obligation</p>
+      <h1>Drive your dream, <em>compare the best lease</em></h1>
+      <p class="hero__text">Compare leasing offers from licensed lenders side by side. Filter by vehicle type, term, deposit and monthly budget to find the match for your needs.</p>
+      <a href="#contact" class="btn">Get started <span class="btn__icon"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    </div>
+  </section>
+
+  <!-- About us -->
+  <section id="about" class="section">
+    <div class="container about">
+      <div class="about__text">
+        <h2 class="section__title">Lease comparison made simple</h2>
+        <p>NextLease helps you understand your options before you commit. We bring leasing offers from our partner lenders into one place, so you can compare them clearly instead of chasing quotes.</p>
+        <p>Our guides, calculators and support team explain leasing, costs and terms in plain language, so you can make an informed decision.</p>
+      </div>
+      <ul class="values">
+        <li class="reveal"><strong>Free and unbiased</strong><span>No fees, no obligation, and clear information on every offer.</span></li>
+        <li class="reveal"><strong>Licensed lenders</strong><span>We compare products from our partner lenders side by side.</span></li>
+        <li class="reveal"><strong>Support when you need it</strong><span>Our team is here to answer your questions about leasing.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Our services -->
+  <section id="services" class="section section--gray">
+    <div class="container">
+      <h2 class="section__title center">Our services</h2>
+      <p class="section__lead center">Free tools and services to help you compare, explore and secure the right vehicle lease, all in one place.</p>
+      <div class="cards">
+        <article class="card reveal"><span class="card__icon"><svg viewBox="0 0 24 24"><path d="M7 7h11l-3-3M17 17H6l3 3"/></svg></span><h3>Lease comparison</h3><p>Compare leasing offers from multiple licensed lenders side by side. Filter by vehicle type, term, deposit and monthly budget.</p></article>
+        <article class="card reveal"><span class="card__icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M16 16l4 4"/></svg></span><h3>Vehicle search</h3><p>Explore popular sedans, SUVs, utes and EVs. View average lease estimates and compare models for your lifestyle.</p></article>
+        <article class="card reveal"><span class="card__icon"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8M8 12h.01M12 12h.01M16 12h.01M8 16h.01M12 16h.01M16 16h.01"/></svg></span><h3>Calculator tools</h3><p>Estimate monthly payments and total lease cost, and compare scenarios by deposit, term and annual distance.</p></article>
+        <article class="card reveal"><span class="card__icon"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span><h3>Free and unbiased</h3><p>Read our guides and FAQs to understand leasing, costs and terms. Our support team will answer your questions.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--sky" aria-labelledby="options-title">
+    <div class="container">
+      <h2 class="section__title center" id="options-title">Leasing options we compare</h2>
+      <p class="section__lead center">We help you compare leases across all major vehicle types.</p>
+      <div class="options">
+        <article class="option reveal"><svg viewBox="0 0 120 50"><path d="M8 36h104v-8c0-4-3-6-6-7l-14-3-12-9H50L36 20l-22 4c-4 1-6 3-6 7z"/><circle cx="32" cy="36" r="7"/><circle cx="88" cy="36" r="7"/></svg><h3>Sedan leasing</h3><p>Great for daily commuting and fuel efficiency, with flexible terms.</p></article>
+        <article class="option reveal"><svg viewBox="0 0 120 50"><path d="M8 36h104v-10c0-4-3-6-6-7l-8-2-10-12H34L26 19l-14 3c-3 1-4 3-4 6z"/><circle cx="32" cy="36" r="7"/><circle cx="88" cy="36" r="7"/></svg><h3>SUV leasing</h3><p>Perfect for families and outdoor adventures, with higher mileage and space.</p></article>
+        <article class="option reveal"><svg viewBox="0 0 120 50"><path d="M6 36h108V26l-4-2H76V13c0-2-1-3-3-3H46L32 22l-20 3c-3 1-6 3-6 7z"/><circle cx="30" cy="36" r="7"/><circle cx="92" cy="36" r="7"/></svg><h3>Ute leasing</h3><p>Ideal for business and tradies, with options for heavy usage and payload.</p></article>
+        <article class="option reveal"><svg viewBox="0 0 120 50"><path d="M8 36h104v-8c0-4-3-6-6-7l-14-3-12-9H50L36 20l-22 4c-4 1-6 3-6 7z"/><circle cx="32" cy="36" r="7"/><circle cx="88" cy="36" r="7"/></svg><h3>EV leasing</h3><p>Drive electric with lower running costs and compare incentive options.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our team -->
+  <section id="team" class="section">
+    <div class="container">
+      <h2 class="section__title center">Our team</h2>
+      <p class="section__lead center">The people you will speak to when you contact us.</p>
+      <div class="team">
+        <article class="member reveal"><div class="member__photo"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7"/></svg></div><h3>Full Name</h3><p>Managing Director</p></article>
+        <article class="member reveal"><div class="member__photo"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7"/></svg></div><h3>Full Name</h3><p>Lease Comparison Manager</p></article>
+        <article class="member reveal"><div class="member__photo"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7"/></svg></div><h3>Full Name</h3><p>Customer Support Lead</p></article>
+        <article class="member reveal"><div class="member__photo"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7"/></svg></div><h3>Full Name</h3><p>Partner Relations</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact us -->
+  <section id="contact" class="section section--gray">
+    <div class="container contact">
+      <div>
+        <h2 class="section__title">Contact us</h2>
+        <p class="section__lead">Tell us what you are looking for and we will reply within one working day.</p>
+        <ul class="contact__info">
+          <li><strong>Phone</strong><a href="tel:+94770000000">+94 77 000 0000</a></li>
+          <li><strong>Email</strong><a href="mailto:hello@nextlease.lk">hello@nextlease.lk</a></li>
+          <li><strong>Office</strong><span>Your office address, City, Sri Lanka</span></li>
+        </ul>
+      </div>
+      <form class="form" id="contactForm" novalidate>
+        <label>Your name<input name="name" type="text" required autocomplete="name"></label>
+        <label>Phone or email<input name="contact" type="text" required autocomplete="email"></label>
+        <label>Which vehicle type or lease are you interested in?<textarea name="message" rows="4" required></textarea></label>
+        <button type="submit" class="btn">Send on WhatsApp <span class="btn__icon"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+        <p class="form__status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__brand">
+      <img src="images/logo-icon.png" alt="" width="44" height="44">
+      <div><strong>NextLease</strong><span>Drive Your Dream</span></div>
+      <a href="#contact" class="footer__link">Contact us</a>
+    </div>
+    <p class="footer__note">Disclaimer: NextLease is a non-finance comparison platform. We compare leasing products from our partner lenders to help you make informed decisions. This is not financial advice. Terms, conditions, fees and credit approval apply. NextLease does not provide financial services or credit. For personal advice, consult a licensed finance adviser.</p>
+    <p class="footer__note">&copy; <span id="year"></span> NextLease</p>
+  </div>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/94770000000" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M3 21l1.6-4.6A8.5 8.5 0 1 1 8 19.6zM9 8.5c0 3 3.5 6.5 6.5 6.5l1.2-1.4-2-1-1 .7c-1-.4-2-1.4-2.4-2.4l.7-1-1-2z"/></svg>
+</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>
