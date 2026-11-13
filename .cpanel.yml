@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=$HOME/admin.nextlease.lk/
+    - /bin/mkdir -p $DEPLOYPATH
+    - /bin/cp -R index.html css js images $DEPLOYPATH
