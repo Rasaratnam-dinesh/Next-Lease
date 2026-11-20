@@ -48,7 +48,7 @@ h1,h2,h3{line-height:1.12;letter-spacing:-.02em;margin:0}
 
 /* Hero (light, airy) */
 .hero{position:relative;min-height:calc(100svh - 60px);display:flex;align-items:flex-end;overflow:hidden;padding:0 0 56px;background:var(--sky-soft)}
-.hero__media{position:absolute;inset:0;background:linear-gradient(to top,var(--sky-soft) 12%,rgba(230,240,251,.7) 50%,rgba(230,240,251,0) 100%),url(../images/hero.jpg) center top/cover no-repeat,url(../images/hero-placeholder.svg) center top/cover no-repeat}
+.hero__media{position:absolute;inset:0;background:linear-gradient(to top,var(--sky-soft) 12%,rgba(230,240,251,.7) 50%,rgba(230,240,251,0) 100%),url(../images/hero.jpg) center top/cover no-repeat,url(../images/hero-placeholder.jpg) center top/cover no-repeat}
 .hero__content{position:relative;padding-top:40vh}
 .hero__tag{margin:0 0 14px;color:var(--blue-soft);font-size:.95rem;font-weight:600}
 .hero h1{font-size:clamp(2.3rem,8.5vw,4.6rem);font-weight:800;color:var(--blue)}
@@ -76,13 +76,13 @@ h1,h2,h3{line-height:1.12;letter-spacing:-.02em;margin:0}
 .card__icon{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--blue);margin-bottom:16px}
 .card__icon svg{width:24px;fill:none;stroke:#fff;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .card h3{font-size:1.25rem;margin-bottom:8px;color:var(--blue)}
-.card p{margin:0;color:var(--gray-text);font-size:.97rem}
+.card p{margin:0;color:var(--gray-text);font-size:.97rem;;text-align: justify;}
 
 .option{padding:22px 20px;text-align:center}
 .option svg{width:140px;height:58px;margin:0 auto 10px;fill:var(--blue-soft)}
 .option svg circle{fill:#fff;stroke:var(--blue-soft);stroke-width:4}
 .option h3{font-size:1.2rem;color:var(--ink)}
-.option p{margin:6px 0 0;color:var(--gray-text);font-size:.95rem}
+.option p{margin:6px 0 0;color:var(--gray-text);font-size:.95rem;;text-align: justify;}
 
 .team{display:grid;gap:18px;grid-template-columns:repeat(2,1fr)}
 .member{padding:24px 14px;text-align:center}
@@ -142,7 +142,7 @@ h1,h2,h3{line-height:1.12;letter-spacing:-.02em;margin:0}
   .nav__contact a:hover{background:var(--blue-dark);color:#fff}
   .nav__contact svg{display:block;width:18px;height:18px}
   .hero{min-height:100svh;align-items:center;padding:110px 0 60px}
-  .hero__media{background:linear-gradient(to right,var(--sky-soft) 38%,rgba(230,240,251,.7) 55%,rgba(230,240,251,0) 80%),url(../images/hero.jpg) right center/cover no-repeat,url(../images/hero-placeholder.svg) right center/cover no-repeat}
+  .hero__media{background:linear-gradient(to right,var(--sky-soft) 38%,rgba(230,240,251,.7) 55%,rgba(230,240,251,0) 80%),url(../images/hero.jpg) right center/cover no-repeat,url(../images/hero-placeholder.jpg) right center/cover no-repeat}
   .hero__content{padding-top:0}
   .whatsapp{bottom:24px;right:24px}
   .footer{padding-bottom:32px}
@@ -150,10 +150,45 @@ h1,h2,h3{line-height:1.12;letter-spacing:-.02em;margin:0}
   .contact{grid-template-columns:1fr 1.1fr}
 }
 @media (min-width:1024px){
-  .cards,.options{grid-template-columns:repeat(4,1fr)}
+  .cards{grid-template-columns:repeat(3,1fr)}
 }
+
+@media (min-width:1024px){
+  .options{grid-template-columns:repeat(4,1fr)}
+}
+
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *{transition:none!important}
   .js .reveal{opacity:1;transform:none}
 }
+
+/* ===== Mobile only: show the car in the hero ===== */
+@media (max-width:767px){
+  .hero{
+    padding-bottom:calc(110px + env(safe-area-inset-bottom)); /* keeps the button above the bottom nav */
+  }
+  .hero__media{
+    inset:0 0 auto 0;                 /* picture area sits at the top only */
+    height:46%;
+    background:
+      url(../images/hero.jpg) right top/auto 100% no-repeat,
+      url(../images/hero-placeholder.jpg) right top/auto 100% no-repeat;
+    -webkit-mask-image:linear-gradient(to bottom,#000 88%,transparent 100%);
+            mask-image:linear-gradient(to bottom,#000 88%,transparent 100%);
+  }
+  .hero__content{padding-top:44vh}   /* text starts below the car */
+}
+
+/* Team cards: photo, role, qualifications, experience */
+.team{grid-template-columns:1fr}
+@media (min-width:640px){.team{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1024px){.team{grid-template-columns:repeat(4,1fr)}}
+
+.member{padding:28px 18px}
+.member__photo{position:relative;width:120px;height:120px;margin:0 auto 16px;border:3px solid var(--sky)}
+.member__photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top}
+.member h3{font-size:1.1rem}
+.member .member__role{margin-top:6px;color:var(--blue);font-weight:600;font-size:.95rem;line-height:1.4}
+.member .member__edu{margin-top:10px;color:var(--gray-text);font-size:.9rem}
+.member .member__exp{margin-top:10px;padding-top:10px;border-top:1px solid var(--gray);color:var(--blue-soft);font-size:.88rem;font-weight:600}
